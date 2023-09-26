@@ -1,0 +1,43 @@
+
+
+// swap procedure 
+
+PROCEDURE swap(VAR x, y : INTEGER)
+VAR
+
+   tmp : INTEGER;
+BEGIN
+  tmp := x;
+  x := y;
+  y:= tmp;
+END
+
+
+ALGORITHM TRI
+VAR
+  t : ARRAY_OF integer[1..100];
+  i,k,j:integer; 
+  BEGIN
+// remplissage de notre tableau   
+  FOR i FROM 0 TO lenght.t-1 STEP step  DO
+    read(t[i]);
+  END_FOR
+i:=0;
+// le manipulation de notre tableau 
+ FOR i FROM 0 TO lenght.t-1 STEP step  DO
+  k:=1;
+  FOR j FROM 0 TO lenght.t-2 STEP step  DO
+
+  IF (T[j]>t[k]) THEN
+  swap(t[j],t[k]);
+  k:=k+1;
+  END IF
+ END_FOR
+ END_FOR
+
+ // affichage de notre tableau 
+ i:=0;
+  FOR i FROM 0 TO lenght.t-1 STEP step  DO   
+  write(t[i]);
+  END_FOR
+END
